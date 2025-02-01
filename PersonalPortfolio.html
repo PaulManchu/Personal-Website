@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="TF-edge">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Digital Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo1.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p >IT Support</p>
+            <h1>Hi, Welcome to my personal website!<span> <br>I'm Mocoana Paul Manchu,</span>
+                <br>an IT professional with a passion for solving technical challenges
+                and empowering organizations through innovative solutions.</h1>
+        </div>
+    </div>
+</div>
+<!-- ----------about---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/about.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>My technical expertise in systems like Active Directory, 
+                    Azure, and cybersecurity fundamentals, combined with my 
+                    ability to collaborate effectively with teams and vendors, 
+                    positions me as a strong candidate for this role. 
+                    I am particularly passionate about ensuring network 
+                    reliability and security, which I believe is critical to 
+                    organizational success.
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Systems Administration</span><br>Windows 11, Microsoft 365, Server 2016-2022, Active Directory, Azure AD</li>
+                        <li><span>Software Development</span><br>.NET C#, Java, JavaScript, Python</li>
+                        <li><span>IT Support</span><br>Troubleshooting, ticket management, ITSM tool proficiency</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2022 - Current</span><br>Volunteer: IT Desktop Support at Phinduzame Primary School</li>
+                        <li><span>2021 - 2022</span><br>ICT Assistant at Phinduzame Primary School</li>
+                        <li><span>2021 - 2021</span><br>Intern: FTTH Technical Support Engineer at Vox Telecom</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022</span><br>Google IT Fundamentals from Coursera</li>
+                        <li><span>2020</span><br>Diploma in Information Technology from Damelin Braamfontein</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ---------services--------- -->
+ <div id="services">
+ <div class="container">
+    <h1 class="sub-title">My Services</h1>
+    <div class="services-list">
+        <div>
+            <i class="fas fa-server"></i>
+            <i class="fa-brands fa-windows"></i>
+            <h2>Systems Administration</h2>
+            <p>Windows 11, Microsoft 365, Server 2016-2022, Active Directory, Azure AD</p>
+        </div>
+        <div>
+            <i class="fas fa-code"></i>
+            <i class="fa-solid fa-code"></i>
+            <h2>Software Development</h2>
+            <p>Application & Web Dev</p>
+        </div>
+        <div>
+            <i class="fas fa-cloud-shield-alt"></i>
+            <i class="fa-solid fa-cloud"></i>
+            <h2>Cloud & Security</h2>
+            <p>Network Administration</p>
+        </div>
+    </div>
+ </div>
+ </div>
+
+<!-----------portfolio----------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/systemsadmin.jpg">
+                <div class="layer">
+                    <h3>Systems Administration</h3>
+                    <p>I specialize in managing and maintaining IT 
+                        infrastructure.</p>
+                    <a href="#"><i class="fas fa-server"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/systemsdev.jpg">
+                <div class="layer">
+                    <h3>Software Development</h3>
+                    <p>I am a versatile software developer skilled in creating efficient and scalable solutions. 
+                        Proficient in .NET (C#), Java, Python, and SQL.</p>
+                    <a href="#"><i class="fas fa-code"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/cloud&sec.jpg">
+                <div class="layer">
+                    <h3>Cloud & Security</h3>
+                    <p>I specialize in managing cloud environments, ensuring data security, and optimizing network performance.</p>
+                    <a href="#"><i class="fas fa-cloud"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See More</a>
+    </div>
+</div>
+<!-------------contact----------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-envelope"></i> manchupaul@outlook.com</p>
+                <p><i class="fas fa-phone-alt"></i> 079 825 2753</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/mocoana-paul-manchu-610583198/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://facebook.com/paul.manchu"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/PaulManchu"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://github.com/PaulManchu"><i class="fab fa-github"></i></a>
+                </div>
+                <a href="images/Paul IT Support (1).pdf" download class="btn btn2">Download My CV</a>
+            </div>
+            <div class="contact-right"></div>
+            <form name="submit-to-google-sheet">
+                <input type="text" name="Name" placeholder="Your Name" required>
+                <input type="email" name="Email" placeholder="Your Email" required>
+                <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <button type="submit" class="btn btn2">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright © 2025 Paul. Personal Website.</p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    }
+</script>
+
+<form name="submit-to-google-sheet"></form>
+  
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzbjh4v8fI1TOPU8x-raxDBn0DIJ_vpn20Br3h06BEOn0eksDjTpwDs4t1TuGYh49Sa/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+</body>
+</html>
