@@ -1,0 +1,118 @@
+{
+  "theme": "light",
+  "archetype": "Editorial / Old Money Tech (Swiss variation)",
+  "typography": {
+    "headings": {
+      "fontFamily": "Playfair Display",
+      "weights": ["400", "700"],
+      "usage": "H1, H2, H3. Use tracking-tight, leading-none for H1, H2."
+    },
+    "body": {
+      "fontFamily": "Manrope",
+      "weights": ["300", "400", "500"],
+      "usage": "Paragraphs, lists, standard text. Use tracking-normal, leading-relaxed."
+    },
+    "labels": {
+      "fontFamily": "JetBrains Mono",
+      "weights": ["400"],
+      "usage": "Overlines, tech stack tags, numbered chapter markers (e.g., [ 01 ]). Use tracking-[0.2em], uppercase, text-xs."
+    }
+  },
+  "colors": {
+    "background": {
+      "primary": "#F4F4F5",
+      "secondary": "#E4E4E7",
+      "tailwind": "bg-zinc-100 and bg-zinc-200"
+    },
+    "text": {
+      "primary": "#18181B",
+      "secondary": "#52525B",
+      "tailwind": "text-zinc-900 and text-zinc-600"
+    },
+    "accent": {
+      "primary": "#0F766E",
+      "hover": "#115E59",
+      "tailwind": "teal-700 and teal-800"
+    },
+    "border": {
+      "light": "#E4E4E7",
+      "tailwind": "border-zinc-200"
+    }
+  },
+  "visual_enhancers": {
+    "borders": "Soft, 1px solid border-zinc-200. Use sparingly to separate grid items or create 'clipped frame' photography looks.",
+    "shadows": "Very subtle ambient shadows for cards/modals: shadow-[0_8px_30px_rgb(0,0,0,0.04)]",
+    "corners": "Soft corners, not overly rounded. Use rounded-md (6px) or rounded-lg (8px). NO pill-shaped overly rounded AI cards.",
+    "photography_treatment": "Deliberate and editorial. Use 'clipped frames' (images inside div containers with padding, e.g., p-2 bg-white border border-zinc-200). Use grayscale filter on hover or subtle zoom.",
+    "negative_space": "Generous spacing. Use py-24, py-32 for sections. Large gaps in grids (gap-12, gap-16)."
+  },
+  "layouts": {
+    "hero": "Large kinetic hero. Text left-aligned with masked line-by-line reveal. Portrait on the right, treated with a clipped frame or overlapping an architectural background element.",
+    "manifesto_chapters": "Numbered sections (01. ABOUT, 02. SKILLS). Section headers should feature the number in JetBrains Mono and title in Playfair Display.",
+    "skills_grid": "Bento-style or editorial column grid (1-col mobile, 2-col or 4-col desktop). No percentage bars. Use clean typography lists with JetBrains Mono tags.",
+    "experience_timeline": "Vertical timeline. Clean line running down the left with subtle dot markers. Editorial spacing.",
+    "marquee": "One slow, smooth editorial marquee strip (react-fast-marquee) displaying technologies or brand pillars (e.g., 'SYSTEMS / CLOUD / OPERATIONS / SUPPORT')."
+  },
+  "motion": {
+    "scrolling": "Lenis for premium momentum scrolling (MANDATORY).",
+    "hero_reveal": "Framer Motion line-by-line text reveal using overflow-hidden wrappers on text lines.",
+    "parallax": "Subtle framer-motion useScroll/useTransform on hero image or background shapes.",
+    "scroll_reveal": "Framer motion whileInView for section content fading in and drifting up gently (y: 20, opacity: 0 -> y: 0, opacity: 1).",
+    "micro_interactions": "Subtle scale up (scale-105) on project image hover. Arrow icons shifting right (translate-x-1) on button hover."
+  },
+  "media": {
+    "hero_portrait": {
+      "url": "https://images.pexels.com/photos/30975995/pexels-photo-30975995.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Professional confident man with glasses, dark shirt, smartwatch. Use for Hero section.",
+      "category": "portrait"
+    },
+    "about_secondary_photo": {
+      "url": "https://images.unsplash.com/photo-1622151834625-66296f9f0e96?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwzfHxtYW4lMjB3b3JraW5nJTIwbGFwdG9wJTIwcHJvZmVzc2lvbmFsfGVufDB8fHx8MTc4NzU1MjY3MXww&ixlib=rb-4.1.0&q=85",
+      "description": "Man in black long sleeve sitting in front of macbook. Use for About Me section.",
+      "category": "portrait"
+    },
+    "project_1_image": {
+      "url": "https://images.pexels.com/photos/17489152/pexels-photo-17489152.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+      "description": "Modern rack-mounted server units. Use for Featured Project 1.",
+      "category": "project"
+    },
+    "project_2_image": {
+      "url": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NDh8MHwxfHNlYXJjaHwxfHxjbG91ZCUyMGluZnJhc3RydWN0dXJlJTIwc2VydmVyJTIwcmFja3xlbnwwfHx8fDE3ODc1NTI2NzF8MA&ixlib=rb-4.1.0&q=85",
+      "description": "Cable network infrastructure. Use for Featured Project 2.",
+      "category": "project"
+    }
+  },
+  "libraries": {
+    "framer_motion": "For animations (line reveal, parallax, scroll reveal).",
+    "lenis": "For smooth scrolling. Wrap app in ReactLenis.",
+    "lucide_react": "For crisp, minimal icons.",
+    "react_fast_marquee": "For the slow editorial strip.",
+    "radix_ui": "For accessible modals (Project details) and navigation structure if needed."
+  },
+  "accessibility": {
+    "contrast": "Ensure dark charcoal text on off-white bg meets AAA standards. Use teal-700/800 for buttons ensuring good contrast with white text.",
+    "testing": "All interactive elements (buttons, links, form fields, modals) MUST include a 'data-testid' attribute (e.g., data-testid='hero-resume-btn')."
+  },
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "You tend to converge toward generic, 'on distribution' outputs. In frontend design, this creates what users call the 'AI slop' aesthetic. Avoid this: make creative, distinctive frontends that surprise and delight.",
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients.",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy and clipped frames.",
+    "Use glass-morphism effects carefully (backdrop-blur-xl bg-white/70) for sticky navs.",
+    "You MUST NOT apply universal transition. Eg: transition: all. Always add transitions for specific interactive elements like button, input excluding transforms.",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, custom selection states (e.g. teal bg, white text), and loading animations separate good from extraordinary.",
+    "Main agent relies on these image URLs. NEVER use placeholder text/images.",
+    "All interactive elements MUST include a data-testid attribute to facilitate robust automated testing."
+  ],
+  "instructions_to_main_agent": [
+    "Implement the layout in raw HTML/Tailwind for section structures, using Shadcn for the project detail Modals if needed.",
+    "Use Framer Motion to build the 'line-by-line masked reveal' for the H1 in the hero section. Split the text into lines, wrap each in an overflow-hidden div, and animate the inner text sliding up.",
+    "Implement a smooth scrolling wrapper using @studio-freight/react-lenis.",
+    "Ensure typography matches the Editorial IT Support concept: Playfair Display for big headings, Manrope for body, JetBrains Mono for small uppercase tags.",
+    "Do NOT use bright neon colors, progress bars, or spinning elements. Stick to off-white, charcoal, and teal.",
+    "Construct the Skills section as a clean typographic grid with 4 categories, not percentage bars.",
+    "Create a slow 'react-fast-marquee' strip containing words like 'CLOUD INFRASTRUCTURE • SYSTEMS ADMINISTRATION • NETWORKING • IT SUPPORT'. Use JetBrains Mono or Playfair Display for this strip."
+  ]
+}
