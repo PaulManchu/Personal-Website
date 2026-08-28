@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowRight, X } from "lucide-react";
+import { ArrowRight, ArrowUpRight, X } from "lucide-react";
 import { Reveal, SectionHeader } from "./Reveal";
 import { PROJECTS } from "../../data/portfolio";
 
@@ -67,6 +67,18 @@ const ProjectModal = ({ project, onClose }) => {
             ))}
           </div>
           <p className="mt-6 text-base leading-relaxed text-zinc-600">{project.description}</p>
+          {project.link && (
+            <a
+              data-testid="project-modal-live-link"
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group mt-6 inline-flex items-center gap-2 border border-zinc-300 px-5 py-2.5 font-mono text-[11px] uppercase tracking-[0.2em] text-ink transition-colors duration-300 hover:border-teal hover:text-teal"
+            >
+              Visit Live Site — alakhecgl.com
+              <ArrowUpRight size={14} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+          )}
           <h4 className="mt-8 font-mono text-[11px] uppercase tracking-[0.25em] text-zinc-500">
             Key Work
           </h4>
@@ -107,6 +119,12 @@ export const Projects = () => {
                 <span className="absolute left-4 top-4 border border-white/30 bg-ink/50 px-3 py-1 font-mono text-[10px] tracking-[0.3em] text-white backdrop-blur-sm">
                   {p.index}
                 </span>
+                {p.link && (
+                  <span className="absolute right-4 top-4 flex items-center gap-1.5 border border-white/30 bg-teal/80 px-3 py-1 font-mono text-[10px] tracking-[0.3em] text-white backdrop-blur-sm">
+                    <span className="h-1.5 w-1.5 rounded-full bg-white" />
+                    LIVE
+                  </span>
+                )}
               </div>
               <div className="p-8">
                 <h3 className="font-serif text-2xl leading-tight text-ink md:text-3xl">{p.title}</h3>
@@ -121,14 +139,28 @@ export const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <button
-                  data-testid={`project-view-btn-${p.id}`}
-                  onClick={() => setActive(p)}
-                  className="mt-7 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.25em] text-teal transition-colors duration-300 hover:text-teal-dark"
-                >
-                  View Project
-                  <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
-                </button>
+                <div className="mt-7 flex flex-wrap items-center gap-6">
+                  <button
+                    data-testid={`project-view-btn-${p.id}`}
+                    onClick={() => setActive(p)}
+                    className="inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.25em] text-teal transition-colors duration-300 hover:text-teal-dark"
+                  >
+                    View Project
+                    <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
+                  </button>
+                  {p.link && (
+                    <a
+                      data-testid={`project-live-link-${p.id}`}
+                      href={p.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group/link inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.25em] text-zinc-500 transition-colors duration-300 hover:text-teal"
+                    >
+                      Visit Live Site
+                      <ArrowUpRight size={14} className="transition-transform duration-300 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5" />
+                    </a>
+                  )}
+                </div>
               </div>
             </article>
           </Reveal>

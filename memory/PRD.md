@@ -24,7 +24,7 @@ Modern, minimalist, recruiter-focused single-page portfolio for Paul Manchu (IT 
 - Education: Diploma in IT, Damelin College (2017–2020) + Currently Developing list
 - Resume download section + contact links
 
-## Implemented (2026-08-24)
+## Implemented (2026-08-24, updated 2026-08-28)
 - Full single-page portfolio with all 7 sections + editorial marquee + footer
 - Kinetic masked line-by-line hero reveal, parallax portrait + background "PM" monogram, grain overlay
 - Lenis smooth scrolling; nav links and CTAs scroll via lenis
@@ -32,6 +32,7 @@ Modern, minimalist, recruiter-focused single-page portfolio for Paul Manchu (IT 
 - Resume PDF downloads directly from both CTAs (verified HTTP 200)
 - Real resume-sourced content only; contact links wired (email, LinkedIn, GitHub, phone, location)
 - Mobile responsive: hamburger menu, stacked cards, resized imagery
+- Project 2 (Alakhe) now uses a real screenshot of alakhecgl.com, a LIVE badge, and "Visit Live Site" links on card + modal
 
 ## Verified
 - curl 200: /, /Paul-Manchu-Resume.pdf, /photo-b.jpg
@@ -40,7 +41,6 @@ Modern, minimalist, recruiter-focused single-page portfolio for Paul Manchu (IT 
 
 ## Backlog
 - P1: Lightbox/larger gallery treatment for project screenshots if Paul provides lab screenshots
-- P1: Real Alakhe website link/screenshot in project 2 card
 - P2: Blog/notes section for documenting lab learnings
 - P2: Download analytics or simple visit counter
 - P2: OG/social share meta image

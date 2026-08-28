@@ -92,8 +92,8 @@ export const PROJECTS = [
     title: "Alakhe Conglomerate Website & Infrastructure",
     subtitle: "Real-world web platform and cloud infrastructure, built and maintained in production.",
     tags: ["React", "FastAPI", "GitHub", "Cloud Infrastructure", "DNS & SSL"],
-    image:
-      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?crop=entropy&cs=srgb&fm=jpg&q=85&w=940",
+    image: "/alakhe-site.jpg",
+    link: "https://alakhecgl.com",
     description:
       "Built and continue to maintain the company website and its underlying cloud infrastructure for Alakhe Conglomerate — owning everything from the frontend to deployment and troubleshooting.",
     highlights: [
